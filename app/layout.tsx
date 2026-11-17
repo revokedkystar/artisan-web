@@ -1,22 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Allura, Inter } from "next/font/google";
+import { Cormorant_Garamond, Allura, Inter } from "next/font/google";
 import "./globals.css";
 
-// Configure Montserrat for headings and UI elements
-const montserrat = Montserrat({
+// Elegant editorial serif for headings
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "500"],
-  variable: "--font-montserrat",
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
 });
 
-// Configure Allura for that handwritten/artisan accent
+// Handwritten accent, echoing the "Catering" script in the logo
 const allura = Allura({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-allura",
 });
 
-// Configure Inter for body readability
+// Clean sans for body copy and UI
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -25,13 +26,25 @@ const inter = Inter({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
+  themeColor: "#1c1814",
 };
 
 export const metadata: Metadata = {
   title: "Artisan Catering | Private Event Caterers South West & Devon",
-  description: "Premium private event caterers serving the South West. Michelin-standard dining for weddings, parties, and corporate events in Devon by Jordan Hatfield.",
-  keywords: ["event caterers south west", "private chef devon", "wedding catering south west", "artisan catering jordan hatfield"],
+  description:
+    "Premium private event caterers serving the South West. Michelin-standard dining for weddings, parties, and corporate events in Devon by Jordan Hatfield.",
+  keywords: [
+    "event caterers south west",
+    "private chef devon",
+    "wedding catering south west",
+    "artisan catering jordan hatfield",
+  ],
   authors: [{ name: "Joshua Hatfield" }],
+  openGraph: {
+    title: "Artisan Catering | Devon & the South West",
+    description: "Devon's finest just got a whole lot finer. Bespoke catering for weddings, private dining and events.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -40,10 +53,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body
-        className={`${inter.variable} ${montserrat.variable} ${allura.variable} antialiased`}
-      >
+    <html
+      lang="en"
+      className={`${inter.variable} ${cormorant.variable} ${allura.variable}`}
+    >
+      <body className="antialiased">
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}`}</style>
+        </noscript>
         {children}
       </body>
     </html>
