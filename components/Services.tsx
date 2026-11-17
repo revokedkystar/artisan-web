@@ -27,6 +27,19 @@ const services = [
     img: "/food3.png",
     alt: "Grazing platters laid out on the grass",
   },
+  {
+    title: "Hog Roasts",
+    copy: "Slow-roasted hog with crackling, homemade sauces and fresh rolls, perfect for feeding a crowd outdoors.",
+    img: "/food5.png",
+    alt: "Rustic outdoor table set for a relaxed gathering",
+  },
+  {
+    title: "Pop-up Events",
+    copy: "Pop-up dining experiences at your venue or event, available depending on circumstances. Get in touch to talk it through.",
+    img: "/welcome2.png",
+    alt: "Styled pop-up dining table with florals",
+    note: "On request",
+  },
 ];
 
 export default function Services() {
@@ -51,18 +64,18 @@ export default function Services() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <Reveal key={s.title} delay={i * 110} variant="up">
               <a
                 href="#contact"
-                className="group relative flex aspect-[3/4] flex-col justify-end overflow-hidden rounded-[24px] bg-espresso p-7 text-cream"
+                className="group relative flex aspect-[3/4] flex-col lg:aspect-[5/4] justify-end overflow-hidden rounded-[24px] bg-espresso p-7 text-cream"
               >
                 <Image
                   src={s.img}
                   alt={s.alt}
                   fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover opacity-80 transition duration-[1.4s] ease-silk group-hover:scale-110 group-hover:opacity-60"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/30 to-transparent" />
@@ -70,6 +83,11 @@ export default function Services() {
                 <span className="absolute left-7 top-7 font-serif text-sm italic text-cream/70">
                   0{i + 1}
                 </span>
+                {"note" in s && (
+                  <span className="absolute right-7 top-6 rounded-full border border-brass-light/60 bg-espresso/40 px-3 py-1.5 text-[0.6rem] uppercase tracking-[0.25em] text-brass-light backdrop-blur-sm">
+                    {s.note}
+                  </span>
+                )}
 
                 <div className="relative">
                   <h3 className="font-serif text-3xl font-normal md:text-[2.1rem]">{s.title}</h3>

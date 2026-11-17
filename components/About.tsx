@@ -2,7 +2,7 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 
 const pillars = [
-  { value: "15+", label: "Years in South West kitchens" },
+  { value: "24+", label: "Years of culinary experience" },
   { value: "100%", label: "Bespoke, never off-the-shelf" },
   { value: "Devon", label: "Rooted here, serving the South West" },
 ];
@@ -52,7 +52,7 @@ export default function About() {
           <div className="mt-10 max-w-2xl space-y-6 text-lg font-light leading-relaxed text-stone">
             <Reveal delay={150}>
               <p>
-                With over fifteen years in kitchens across the South West, Jordan has proven that
+                With over twenty-four years in kitchens across the South West, Jordan has proven that
                 with his dedication and skill, he can create exceptional dishes that bring joy to
                 those who taste them.
               </p>

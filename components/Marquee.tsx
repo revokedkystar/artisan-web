@@ -4,6 +4,8 @@ const items = [
   "Corporate Events",
   "Grazing Tables",
   "Celebrations",
+  "Hog Roasts",
+  "Pop-up Events",
   "Garden Parties",
 ];
 

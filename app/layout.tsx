@@ -38,6 +38,8 @@ export const metadata: Metadata = {
     "private chef devon",
     "wedding catering south west",
     "artisan catering jordan hatfield",
+    "hog roast devon",
+    "pop-up events devon",
   ],
   authors: [{ name: "Joshua Hatfield" }],
   openGraph: {
