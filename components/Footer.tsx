@@ -59,7 +59,7 @@ export default function Footer() {
 
         <div className="flex flex-col gap-3 border-t border-cream/10 py-8 text-xs text-cream/45 md:flex-row md:justify-between">
           <p>&copy; 2020&ndash;present Artisan Catering. All rights reserved.</p>
-          <p>Developed by Joshua Hatfield.</p>
+          <p>Developed by Xanti Studios (Joshua Hatfield).</p>
         </div>
       </div>
     </footer>
